@@ -1,0 +1,66 @@
+#lock-page {
+  height: 100%;
+  border-radius: 1.25em;
+  background-image: url("/photo/lock-screen-background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  .lock-page-box {
+    position: relative;
+    margin-top: 2.25em;
+    user-select: none;
+    .icon-box {
+      width: 3em;
+      height: 3em;
+      display: grid;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+      margin-top: 3em;
+      span {
+        font-size: 3em;
+      }
+    }
+    .time-box {
+      margin-top: 1em;
+      text-align: center;
+      &-head {
+        font-size: 3em;
+        font-weight: 400;
+      }
+      &-bottom {
+        margin-top: 0.5em;
+      }
+    }
+    .notification-box {
+      margin: 2em 0;
+      &-head {
+        display: grid;
+        grid-auto-flow: column;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 1em;
+        &-icon {
+          cursor: pointer;
+        }
+      }
+      &-body {
+        margin-top: 1em;
+        display: grid;
+        grid-gap: 1em;
+      }
+    }
+    .open-mobile-box {
+      position: absolute;
+      bottom: 2em;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+#home-page {
+  height: 100%;
+  border-radius: 1.25em;
+  background-image: url("/photo/home-screen-background.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  .home-page-box {
+    height: 100%;
+    position: relative;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    align-items: end;
+    grid-gap: 4em;
+    .body-menu-box {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      row-gap: 3em;
+      align-items: end;
+      justify-items: center;
+    }
+    .bottom-menu-box {
+      margin-bottom: 4.5em;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      justify-items: center;
+    }
+  }
+}

@@ -1,0 +1,57 @@
+.recent-call {
+  height: 100%;
+
+  &-box {
+    position: relative;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 1fr 3fr;
+
+    &-head {
+      //   border: 1px solid blue;
+      display: grid;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.2em;
+    }
+    &-body {
+      //   border: 1px solid gray;
+      overflow-y: auto;
+      &::-webkit-scrollbar {
+        width: 0px;
+      }
+      &-icon {
+        ul {
+          display: grid;
+          grid-auto-flow: column;
+          align-items: center;
+          justify-content: end;
+          color: #fff;
+          grid-gap: 0.5em;
+          li {
+            cursor: pointer;
+          }
+        }
+      }
+      &-content {
+        ul {
+          display: grid;
+          grid-gap: 2em;
+          li {
+            display: grid;
+            grid-gap: 0.5em;
+            .date {
+              margin-left: 1em;
+              font-size: 0.9em;
+              color: lightgray;
+            }
+            .directory-box {
+              display: grid;
+              grid-gap: 0.5em;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,79 @@
+.settings {
+  height: 100%;
+  &-box {
+    height: 100%;
+    background-color: #000;
+    color: #fff;
+    display: grid;
+    grid-template-rows: 1fr 3fr;
+    &-head {
+      display: grid;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2em;
+    }
+    &-body {
+      display: grid;
+      grid-template-rows: auto 1fr;
+      overflow-y: auto;
+      &-icons {
+        ul {
+          display: grid;
+          grid-auto-flow: column;
+          justify-content: end;
+          align-items: center;
+          li {
+            cursor: pointer;
+          }
+        }
+      }
+      &-content {
+        margin-bottom: 3em;
+        overflow-y: auto;
+        ul {
+          margin-top: 1em;
+          overflow-y: auto;
+          max-height: 100%;
+          background-color: #161616;
+          padding: 1em;
+          border-radius: 2em;
+          display: grid;
+          grid-gap: 0.5em;
+          li {
+            cursor: pointer;
+            display: grid;
+            grid-template-columns: auto 1fr;
+            grid-gap: 0.5em;
+            justify-content: start;
+            align-items: center;
+            .image-box {
+              width: 2em;
+              height: 2em;
+              img {
+                width: 100%;
+                height: 100%;
+              }
+            }
+            .content-box {
+              padding-bottom: 0.5em;
+              border-bottom: 1px solid #313131;
+
+              .title {
+                font-size: 0.9em;
+              }
+              .subtitle {
+                font-size: 0.7em;
+                color: gray;
+              }
+            }
+            &:last-child {
+              .content-box {
+                border: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

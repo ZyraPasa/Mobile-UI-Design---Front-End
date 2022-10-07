@@ -1,0 +1,68 @@
+.directory {
+  height: 100%;
+  &-box {
+    height: 100%;
+    display: grid;
+    grid-template-rows: 1fr 3fr;
+    &-head {
+      position: relative;
+      .text-box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        text-align: center;
+        padding: 0 1em;
+        .title {
+          font-size: 1.2em;
+        }
+        .count-info {
+          margin-top: 1em;
+          font-size: 0.8em;
+          color: gray;
+        }
+      }
+    }
+    &-body {
+      position: relative;
+      overflow-y: auto;
+      &-options {
+        position: sticky;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #000;
+        z-index: 1;
+        ul {
+          display: grid;
+          grid-auto-flow: column;
+          justify-content: end;
+          align-items: center;
+          grid-gap: 0.5em;
+          li {
+            cursor: pointer;
+            user-select: none;
+          }
+        }
+      }
+      &-content {
+        ul {
+          display: grid;
+          grid-gap: 2em;
+          li {
+            .character {
+              margin-left: 1em;
+              font-size: 0.9em;
+              color: gray;
+            }
+            .list-box {
+              display: grid;
+              grid-gap: 0.5em;
+            }
+          }
+        }
+      }
+    }
+  }
+}

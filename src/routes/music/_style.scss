@@ -1,0 +1,91 @@
+.music {
+  height: 100%;
+  &-box {
+    height: 100%;
+    background-color: #000;
+    color: #fff;
+    display: grid;
+    grid-template-rows: 1fr 3fr;
+    &-head {
+      display: grid;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3em;
+      //   border: 1px solid red;
+    }
+    &-body {
+      //   border: 1px solid red;
+      display: grid;
+      grid-template-rows: auto 1fr;
+      overflow-y: auto;
+      margin-bottom: 3em;
+      &-icons {
+        position: sticky;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #000;
+        z-index: 1;
+        ul {
+          display: grid;
+          grid-auto-flow: column;
+          justify-content: end;
+          align-items: center;
+          grid-gap: 1em;
+          li {
+            cursor: pointer;
+          }
+        }
+      }
+      &-content {
+        margin-top: 1em;
+        ul {
+          background-color: #161616;
+          border-radius: 2em;
+          padding: 1em;
+          display: grid;
+          grid-gap: 0.5em;
+          li {
+            cursor: pointer;
+            display: grid;
+            grid-template-columns: auto 1fr;
+            align-items: center;
+            justify-content: start;
+            grid-gap: 0.5em;
+            .image-box {
+              width: 2em;
+              height: 2em;
+              img {
+                width: 100%;
+                height: 100%;
+              }
+            }
+            .content-box {
+              padding-bottom: 0.5em;
+              border-bottom: 1px solid gray;
+              .content-head {
+                font-size: 0.9em;
+              }
+              .content-body {
+                display: grid;
+                grid-auto-flow: column;
+                justify-content: space-between;
+                align-items: center;
+                color: gray;
+                font-size: 0.8em;
+                &-size {
+                  font-size: 0.7em;
+                }
+              }
+            }
+            &:last-child {
+              .content-box {
+                border: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

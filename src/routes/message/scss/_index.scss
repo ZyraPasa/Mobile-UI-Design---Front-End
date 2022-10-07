@@ -1,0 +1,118 @@
+section {
+  height: 100%;
+  display: grid;
+  grid-template-rows: 1fr 3fr;
+
+  .section-head {
+    // border: 1px solid red;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+  }
+  .section-body {
+    // border: 1px solid blue;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    overflow-y: auto;
+    position: relative;
+    &-icons {
+      position: sticky;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #000;
+      z-index: 1;
+      ul {
+        display: grid;
+        grid-auto-flow: column;
+        justify-content: end;
+        align-items: center;
+        grid-gap: 0.5em;
+        li {
+          cursor: pointer;
+          user-select: none;
+        }
+      }
+    }
+    &-content {
+      margin-top: 1em;
+      ul {
+        max-height: 100%;
+        background-color: #161616;
+        border-radius: 2em;
+        padding: 1em;
+        display: grid;
+        grid-gap: 0.5em;
+        li {
+          display: grid;
+          grid-template-columns: auto 1fr;
+          grid-gap: 0.5em;
+          align-items: center;
+          justify-content: start;
+          cursor: pointer;
+          .image-box {
+            width: 3em;
+            height: 3em;
+            img {
+              width: 100%;
+              height: 100%;
+              border-radius: 50%;
+            }
+          }
+          .content-box {
+            padding-bottom: 0.5em;
+            border-bottom: 1px solid #313131;
+            .content-head-box {
+              display: grid;
+              grid-auto-flow: column;
+              justify-content: space-between;
+              align-items: center;
+              .title-box {
+                font-size: 0.9em;
+              }
+              .time-box {
+                font-size: 0.8em;
+                color: gray;
+              }
+            }
+            .content-body-box {
+              position: relative;
+              .last-message {
+                margin-right: 1.5em;
+                margin-top: 0.3em;
+                font-size: 0.9em;
+                color: gray;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                text-overflow: ellipsis;
+              }
+              .notification-box {
+                position: absolute;
+                top: 50%;
+                right: 0;
+                transform: translateY(-50%);
+                width: 1.5em;
+                height: 1.5em;
+                background-color: #0a98d9;
+                border-radius: 50%;
+                display: grid;
+                align-items: center;
+                justify-content: center;
+                font-size: 0.9em;
+                font-weight: bold;
+              }
+            }
+          }
+          &:last-child {
+            .content-box {
+              border: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

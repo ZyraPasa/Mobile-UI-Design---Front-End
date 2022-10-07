@@ -1,0 +1,43 @@
+.notification {
+  background-color: rgba(0, 0, 0, 0.75);
+  padding: 0.5em 1em;
+  padding-bottom: 1em;
+  border-radius: 0.5em;
+  margin: 0 1em;
+  max-width: 100%;
+  &-head {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-between;
+    align-items: center;
+    color: gray;
+    &-text {
+      display: grid;
+      grid-auto-flow: column;
+      justify-content: start;
+      align-items: center;
+      grid-gap: 0.5em;
+      &-icon {
+        width: 2em;
+        height: 2em;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        span {
+          font-size: 1.5em;
+        }
+      }
+    }
+    &-time {
+      font-size: 0.9em;
+    }
+  }
+  &-body {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

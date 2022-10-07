@@ -1,0 +1,100 @@
+#call {
+  height: 100%;
+  .call-box {
+    height: 100%;
+    position: relative;
+    color: #fff;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-gap: 1em;
+    user-select: none;
+    &-head {
+      display: grid;
+      grid-auto-flow: column;
+      justify-content: space-between;
+      align-items: center;
+      &-title {
+        font-size: 0.9em;
+      }
+      &-content {
+        ul {
+          display: grid;
+          grid-auto-flow: column;
+          justify-content: center;
+          align-items: center;
+          grid-gap: 0.5em;
+          li {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    &-body {
+      display: grid;
+      // grid-template-rows: auto 3fr;
+      // grid-gap: 0.5em;
+      &-result {
+        max-height: 300px;
+        height: 100%;
+        // border: 1px solid red;
+        display: grid;
+        justify-content: center;
+        align-items: end;
+        font-size: 1.2em;
+        overflow: auto;
+        &::-webkit-scrollbar {
+          width: 0;
+        }
+        &::-webkit-scrollbar-thumb {
+          width: 0;
+        }
+        &::-webkit-scrollbar-track {
+          width: 0;
+        }
+      }
+      &-number {
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        .number-box {
+          .number-list {
+            margin-top: 1em;
+            display: grid;
+            grid-template-columns: 4em 4em 4em;
+            grid-template-rows: 4em 4em 4em 4em;
+            grid-gap: 2em;
+            justify-content: center;
+            align-items: center;
+            .number {
+              display: grid;
+              align-items: center;
+              justify-content: center;
+              cursor: pointer;
+              &-title {
+                text-align: center;
+                font-size: 1.5em;
+              }
+              &-subtitle {
+                font-size: 0.9em;
+                color: gray;
+              }
+            }
+          }
+          .call-button-box {
+            width: 3em;
+            height: 3em;
+            margin: 0 auto;
+            margin-top: 1.5em;
+            border-radius: 50%;
+            cursor: pointer;
+            img {
+              border-radius: 50%;
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

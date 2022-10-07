@@ -1,0 +1,122 @@
+main {
+  display: grid;
+  grid-template-rows: 100vh;
+  #layout {
+    display: grid;
+    align-items: end;
+    justify-content: end;
+    padding: 2em 3em;
+    #mobile-app {
+      border: 0.5em solid #000;
+      border-radius: 2em;
+      width: 365px;
+      height: 90%;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+      #mobile-camera-box {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 175px;
+        height: 2.25em;
+        transform: translateX(-50%);
+        background-color: #000;
+        border-bottom-left-radius: 3.25em;
+        border-bottom-right-radius: 3.25em;
+        z-index: 1;
+        &::after {
+          content: "";
+          position: absolute;
+          top: 0.75em;
+          left: 50%;
+          transform: translate(-0.75em, -50%);
+          width: 1em;
+          height: 1em;
+          background-color: rgb(94, 94, 94);
+          border-radius: 50%;
+        }
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0.75em;
+          left: 50%;
+          transform: translate(-0.75em, -50%);
+          margin-left: 0.38em;
+          width: 0.25em;
+          height: 0.25em;
+          background-color: #000;
+          border-radius: 50%;
+          z-index: 2;
+        }
+      }
+      #mobile-app-top {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 2.25em;
+        display: grid;
+        grid-auto-flow: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 1em;
+        z-index: 1;
+        section {
+          font-size: 0.9em;
+          ul {
+            display: grid;
+            grid-auto-flow: column;
+            justify-content: end;
+            align-items: center;
+            li {
+              width: 1.5em;
+              height: 1.5em;
+              display: grid;
+              align-items: center;
+              justify-content: center;
+              span {
+                font-size: 1.25em;
+              }
+            }
+          }
+        }
+      }
+      #mobile-app-body {
+        height: 100%;
+        position: relative;
+      }
+      #mobile-app-bottom {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 3em;
+        display: grid;
+        align-items: center;
+        user-select: none;
+        z-index: 1;
+        ul {
+          display: grid;
+          grid-auto-flow: column;
+          justify-content: center;
+          align-items: center;
+          grid-gap: 3em;
+          li {
+            width: 2em;
+            height: 2em;
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            a {
+              span {
+                font-size: 1.75em;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
