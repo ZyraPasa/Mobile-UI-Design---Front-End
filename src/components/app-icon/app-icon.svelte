@@ -27,6 +27,8 @@
       }
     }
     .text-box {
+      display: grid;
+      justify-content: center;
       margin-top: 0.3em;
       font-size: 0.8em;
       text-align: center;

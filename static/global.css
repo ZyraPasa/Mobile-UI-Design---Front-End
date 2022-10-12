@@ -1,3 +1,14 @@
+@font-face {
+  font-family: Instagram;
+  src: url("./fonts/Grandista.otf");
+}
+
+@font-face {
+  font-family: Instagram;
+  font-weight: bold;
+  src: url("./fonts/Grandista.ttf");
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -68,10 +79,59 @@ a:active {
     'opsz' 48
 }
 
-/* .phone-content-box::-webkit-scrollbar{
-  width: 1px;
-} */
+::-webkit-scrollbar {
+display: none;
+}
 
-*::-webkit-scrollbar{
-  width: 0px;
+
+/* types */
+
+
+
+/* size */
+.size-extra-small{
+  width: 14px;
+  height: 14px;
+}
+
+.size-small{
+  width: 20px;
+  height: 20px;
+}
+
+.size-default{
+  width: 24px;
+  height: 24px;
+}
+
+.size-large{
+  width: 32px;
+  height: 32px;
+}
+
+.size-extra-large{
+  width: 60px;
+  height: 60px;
+}
+
+/* font size  */
+
+.font-size-extra-small{
+  font-size: 0.6em;
+}
+
+.font-size-small{
+  font-size: 0.8em;
+}
+
+.font-size-default{
+  font-size: 1em;
+}
+
+.font-size-large{
+  font-size: 1.2em;
+}
+
+.font-size-extra-large{
+  font-size: 1.5em;
 }

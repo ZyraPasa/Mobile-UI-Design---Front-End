@@ -10,7 +10,7 @@
         <AppIcon icon="/app-icon/clock.png" text="Saat" />
         <AppIcon icon="/app-icon/calculator.png" text="Hesap Makinesi" link="/calculator" />
         <AppIcon icon="/app-icon/music.png" text="Müzik" link="/music" />
-        <AppIcon icon="/app-icon/photos.png" text="Galeri" />
+        <AppIcon icon="/app-icon/instagram.png" text="Instagram" link="/instagram" />
       </div>
       <div class="bottom-menu-box">
         <AppIcon icon="/app-icon/phone.png" link="/phone" />

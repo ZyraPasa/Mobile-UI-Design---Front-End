@@ -1,0 +1,102 @@
+.post {
+  background-color: #fff;
+  &-head {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em 1em;
+    border-bottom: 1px solid gray;
+    &-left {
+      a {
+        display: grid;
+        grid-auto-flow: column;
+        align-items: center;
+        justify-content: start;
+        grid-gap: 0.5em;
+        .post-head-left-image {
+          width: 3em;
+          height: 3em;
+          display: grid;
+          align-items: center;
+          justify-content: center;
+          img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+          }
+        }
+        .post-head-left-text {
+          .title {
+            font-weight: bold;
+            font-size: 0.9em;
+          }
+          .subtitle {
+            margin-top: 0.3em;
+            color: gray;
+            font-size: 0.7em;
+          }
+        }
+      }
+    }
+    &-right {
+      display: grid;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+  }
+  &-body {
+    width: 100%;
+    &-image-box {
+      width: 100%;
+      height: auto;
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+    }
+  }
+  &-footer {
+    padding: 0.5em 1em;
+    &-top {
+      display: grid;
+      grid-auto-flow: column;
+      justify-content: space-between;
+      align-items: center;
+      &-left {
+        ul {
+          display: grid;
+          grid-auto-flow: column;
+          justify-content: start;
+          align-items: center;
+          grid-gap: 1em;
+        }
+      }
+      &-right {
+        display: grid;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+    &-body {
+      margin-top: 0.3em;
+      &-like {
+        font-size: 0.7em;
+        span {
+          font-weight: bold;
+        }
+      }
+      &-comment {
+        .title {
+          font-size: 0.8em;
+          margin-top: 0.3em;
+          span {
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+}

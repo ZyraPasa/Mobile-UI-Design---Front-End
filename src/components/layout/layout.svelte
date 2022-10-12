@@ -4,6 +4,9 @@
   export let isBottom: boolean = true;
   export let bottomMenuColor: string = "#000";
   export let topMenuColor: string = "#000";
+  const backPage = () => {
+    window.history.go(-1);
+  };
 </script>
 
 <main>
@@ -46,7 +49,7 @@
                 <span class="material-symbols-outlined"> circle </span>
               </a>
             </li>
-            <li>
+            <li on:click|preventDefault={backPage}>
               <span class="material-symbols-outlined"> keyboard_arrow_left </span>
             </li>
           </ul>

@@ -1,0 +1,57 @@
+@import "../color.scss";
+
+.color-succes {
+  background-color: $succes;
+  color: #fff;
+  &:hover {
+    background-color: $succes-dark;
+  }
+}
+
+.color-info {
+  background-color: $info;
+  color: #fff;
+  &:hover {
+    background-color: $info-dark;
+  }
+}
+
+.color-danger {
+  background-color: $danger;
+  color: #fff;
+  &:hover {
+    background-color: $danger-dark;
+  }
+}
+
+.color-warning {
+  background-color: $warning;
+  color: #fff;
+  &:hover {
+    background-color: $warning-dark;
+  }
+}
+
+.color-secondary {
+  background-color: $secondary;
+  color: #fff;
+  &:hover {
+    background-color: $secondary-dark;
+  }
+}
+
+.color-primary {
+  background-color: $primary;
+  color: #fff;
+  &:hover {
+    background-color: $primary-dark;
+  }
+}
+
+.color-green {
+  background-color: $green;
+  color: #fff;
+  &:hover {
+    background-color: $green-dark;
+  }
+}

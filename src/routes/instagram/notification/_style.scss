@@ -1,0 +1,45 @@
+.instagram-notification {
+  height: 100%;
+  &-box {
+    height: 100%;
+    padding: 0 1em;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    &-head {
+      display: grid;
+      grid-auto-flow: column;
+      justify-content: start;
+      align-items: center;
+      grid-gap: 1em;
+      &-left {
+        a {
+          display: grid;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+      &-right {
+        font-weight: bold;
+      }
+    }
+    &-body {
+      margin-top: 1em;
+      ul {
+        display: grid;
+        grid-gap: 1em;
+        li {
+          .day {
+            color: #323232;
+            font-size: 0.9em;
+            font-weight: bold;
+          }
+          .notifications {
+            margin-top: 1em;
+            display: grid;
+            grid-gap: 1em;
+          }
+        }
+      }
+    }
+  }
+}

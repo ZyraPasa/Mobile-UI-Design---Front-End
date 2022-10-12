@@ -1,0 +1,160 @@
+.direct {
+  height: 100%;
+  &-box {
+    height: 100%;
+    padding: 0 1em;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    &-head {
+      display: grid;
+      grid-auto-flow: column;
+      justify-content: space-between;
+      align-items: center;
+      &-left {
+        display: grid;
+        grid-auto-flow: column;
+        justify-content: start;
+        align-items: center;
+        grid-gap: 1em;
+        .back-button {
+          a {
+            display: grid;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+        .title-box {
+          font-size: 0.9em;
+          font-weight: bold;
+        }
+      }
+      &-right {
+        ul {
+          display: grid;
+          grid-auto-flow: column;
+          justify-content: end;
+          align-items: center;
+          grid-gap: 1em;
+          li {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    &-body {
+      display: grid;
+      grid-template-rows: auto 1fr;
+      &-search {
+        margin-top: 1em;
+        section {
+          background-color: #f1f1f1;
+          border-radius: 0.5em;
+          display: grid;
+          grid-template-columns: auto 1fr;
+          align-items: center;
+          justify-content: start;
+          .icon-box {
+            width: 2em;
+            height: 2em;
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            span {
+              font-size: 1.25em;
+            }
+          }
+          .input-box {
+            margin-right: 0.3em;
+          }
+        }
+      }
+      &-list {
+        margin-top: 1em;
+        display: grid;
+        grid-template-rows: auto 1fr;
+        .head-box {
+          display: grid;
+          grid-auto-flow: column;
+          justify-content: space-between;
+          align-items: center;
+          font-size: 0.9em;
+          font-weight: bold;
+          &-right {
+            color: #3a8ac5;
+            cursor: pointer;
+          }
+        }
+        section {
+          margin-top: 1em;
+          ul {
+            display: grid;
+            grid-gap: 1em;
+            li {
+              cursor: pointer;
+              user-select: none;
+              display: grid;
+              grid-template-columns: 1fr auto;
+              justify-content: start;
+              align-items: center;
+              grid-gap: 1.5em;
+              .message-box-left {
+                display: grid;
+                grid-auto-flow: column;
+                justify-content: start;
+                align-items: center;
+                grid-gap: 1em;
+                &-image {
+                  width: 3.5em;
+                  height: 3.5em;
+                  img {
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 50%;
+                  }
+                }
+                &-text-box {
+                  font-size: 0.8em;
+                  overflow: hidden;
+                  .title {
+                    font-weight: bold;
+                  }
+                  .last-message {
+                    margin-top: 0.3em;
+                    color: gray;
+                    // overflow: hidden;
+                    // display: block;
+                    // text-overflow: ellipsis;
+                    // white-space: nowrap;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                  }
+                }
+              }
+              .message-box-right {
+                position: relative;
+                .icon-box {
+                  display: grid;
+                  align-items: center;
+                  justify-content: center;
+                }
+                .notification-box {
+                  position: absolute;
+                  width: 0.75em;
+                  height: 0.75em;
+                  top: 50%;
+                  right: 2em;
+                  transform: translateY(-50%);
+                  background-color: #009aff;
+                  border-radius: 50%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
